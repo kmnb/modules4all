@@ -15,7 +15,7 @@
 	</extension>
 </addon>
 
-<addon id="script.module.nanscrapers" name="NaN Scrapers" version="0.5.13" provider-name="Team NaN">
+<addon id="script.module.nanscrapers" name="NaN Scrapers" version="0.5.14" provider-name="Team NaN">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.module.beautifulsoup" version="3.2.1"/>
@@ -27,7 +27,7 @@
     <extension point="xbmc.python.pluginsource" library="lib/default.py">
         <provides>executable</provides>
     </extension>
-    <import addon="script.module.urlresolver" version="3.0.0" optional="true"/>
+    <import addon="script.module.urlresolver" version="2.0" optional="true"/>
     <import addon="script.mrknow.urlresolver" version="2016.10.30.2" optional="true"/>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
