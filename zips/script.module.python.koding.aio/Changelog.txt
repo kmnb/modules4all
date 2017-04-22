@@ -1,8 +1,15 @@
+v.0.7.4:
+- Fixed download dialog not auto-closing once complete. Last push didn't work correctly
+
 v.0.7.3:
 - Fixed the download function, wasn't automatically closing dialog once complete.
+
+v.0.7.2:
 - Tidied up the getSetting functions.
 - Fixed Create_Paths function.
 - Fixed the tutorials on Windows platforms, required url sending through as urlencoded then unencoded.
+
+v.0.7.1:
 - Added Run_As_Kodi() function which hopefully should fix Android Fresh_Install()
 - Improved Open_Settings(), can now focus on a specific item and also send an automated click on the focused item.
 
