@@ -1,3 +1,6 @@
+v.0.8.8:
+- Removed rogue ampersand in addon.xml
+
 v.0.8.7:
 - Added OK_Dialog function
 - Added YesNo_Dialog function
