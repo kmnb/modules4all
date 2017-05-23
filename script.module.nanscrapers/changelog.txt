@@ -1,6 +1,9 @@
+v0.5.17
+- updated m4ufree
+
 v0.5.16
 - removed solar
-- added cinemabox (thx arb)
+- added cinemabox (thx ard)
 - fixed link bug in animetoon
 
 v0.5.15
