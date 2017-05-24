@@ -44,8 +44,8 @@ class Mfree(Scraper):
                             quality_title = parsed_html.findAll("h3", attrs={'title': re.compile("Quality of ")})[0]
                             quality = quality_title.findAll('span')[0].text
                             match = re.search('href="([^"]+-full-movie-.*?[^"]+)', html)
-                                url = match.group(1)
-                                return self.sources(url, quality)
+                            url = match.group(1)
+                            return self.sources(url, quality)
                         except:
                             pass
                 page_numbers = re.findall("http://m4ufree.info/tag/%s/(.*)\"" % q, html)
