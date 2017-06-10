@@ -2,7 +2,7 @@
 
 
 
-import re,urlparse,json
+import re,urlparse,json,xbmcgui
 from liveresolver.modules import client
 from liveresolver.modules.log_utils import log
 
@@ -15,22 +15,19 @@ def resolve(url):
             url = url.replace('/tv/', '/channel/')
         elif not '/channel/' in url:
             raise Exception()
-
-
+ 
         headers = {'X-Requested-With': 'XMLHttpRequest'}
 
         log('Filmon: Getting cookie...')
         cookie = client.request(url, output='cookie')
-        
+
         log('Filmon: Getting channel id...')
         cid = client.request(url, headers=headers)
         cid = json.loads(cid)['id']
-        
 
         headers = {'X-Requested-With': 'XMLHttpRequest', 'Referer': url}
 
         url = 'http://www.filmon.com/ajax/getChannelInfo?channel_id=%s' % cid
-
         log('Filmon: Getting streams...')
         result = client.request(url, cookie=cookie, headers=headers)
 
@@ -47,8 +44,6 @@ def resolve(url):
         
         url.sort()
         url = url[-1][0]
-
         return url
     except:
         return
-
